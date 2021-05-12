@@ -20,7 +20,7 @@ function changeText() {
   } else if (typeof inputValue !== 'number') {
     text.innerHTML = 'El número debe estar entre 0 y 100';
   }
-  console.log (randomNumber);
+  console.log (`Mi número aleatorio es ${randomNumber}`);
 }
 
 function changeTrials() {
