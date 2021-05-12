@@ -2,7 +2,6 @@
 
 const input = document.querySelector ('.js-input');
 const text = document.querySelector ('.js-text');
-const trial = document.querySelector ('.js-trial');
 const button = document.querySelector ('.js-button');
 
 function getRandomNumber(max) {
@@ -21,9 +20,17 @@ function changeText() {
   } else if (typeof inputValue !== 'number') {
     text.innerHTML = 'El número debe estar entre 0 y 100';
   }
+  console.log (randomNumber);
 }
 
-function handleButtonClick () {
+function changeTrials() {
+  let trialText = document.querySelector ('.js-trial');
+  let trialNumber = parseInt (trialText.innerHTML);
+  trialText.innerHTML = trialNumber + 1;
+}
+
+function handleButtonClick (event) {
+  event.preventDefault();
   changeText ();
   changeTrials ();
 }
