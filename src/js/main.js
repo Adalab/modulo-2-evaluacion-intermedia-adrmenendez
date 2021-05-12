@@ -19,7 +19,7 @@ function changeText() {
     text.innerHTML = 'Demasiado alto.';
   } else if (inputValue < randomNumber) {
     text.innerHTML = 'Demasiado bajo.';
-  } else if (inputValue == randomNumber) {
+  } else if (parseInt(inputValue) === randomNumber) {
     text.innerHTML = 'Has ganado campeona!!!';
   } else if (typeof inputValue !== 'number') {
     text.innerHTML = 'El número debe estar entre 0 y 100';
